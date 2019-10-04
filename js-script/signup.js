@@ -14,6 +14,9 @@ function valid()
         return false;
     }
     var p = document.getElementById('password').value;
+    var p1= document.getElementById('password1').value;
+
+
     if(p=="")
     {
         alert("password can't be empty");
@@ -40,5 +43,17 @@ function valid()
         alert("password must contain alphabets,digits and special symbols");
         return false;
     }
+
+   if(!p1.match(p))
+   {
+     alert("passwords do not match");
+       return false;
+   }
+   var cnf=confirm("Are you sure you want to signup for SHARECARE?");
+   if(cnf)
+   return true;
+   else
+   return false;
    
+   return true;
 }

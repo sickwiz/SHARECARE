@@ -76,7 +76,15 @@
             </tr>
             <tr>
                 <td><label style="font-size:20px;color:red;">Set Password</label></td>
+
+                <td><input type="text" placeholder="alphanumeric" name="password" id="password"> </td>
+            </tr>
+            <tr>
+            <td> <label style="font-size:20px;color:red;">Confirm Password</label></td>
+                <td><input type="text" placeholder="alphanumeric" name="password1" id="password1"> <div id="psver" style="font-size:20px;color:red;"> </div> </td>
+
                 <td>      <input type="text" placeholder="alphanumeric" name="password" id="password"></td>
+
             </tr>
         </table>
         <br> <br>
