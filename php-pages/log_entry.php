@@ -1,5 +1,4 @@
 <?php
-echo "welcome";
 $user="sickwiz";
 $l="localhost";
 $p="2409";
@@ -7,12 +6,10 @@ $d="SHARECARE";
 $con= mysqli_connect($l,$user,$p,$d);
 if($con)
 {
-    echo "connected succesfully";
     if(isset($_POST["submit"]))
     {
-        echo "inside 1";
         $en=$_POST['enrollment'];
-        $pass=$_POST['password'];
+        $pass=md5($_POST['password']);
         $sq="SELECT NAME FROM INFO WHERE ENROLLMENT='$en'";
         $res=mysqli_query($con,$sq);
         if(mysqli_num_rows($res)>0)
