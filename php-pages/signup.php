@@ -17,19 +17,19 @@
         <form  method="POST" onsubmit="return valid()" name="myform"  action="log_entry.php">
         <table cellspacing=10 align=center>
             <tr>
-                <td style="font-size:20px;color:red;"> <label> Name</label> </td>
+                <td style="font-size:20px;color:rgb(245, 242, 94);"> <label> Name</label> </td>
                 <td><input type="text" name="name" id="name"> </td>
             </tr>
             <tr>
-            <td style="font-size:20px;color:red;"> <label> Enrollment</label> </td>
+            <td style="font-size:20px;color:rgb(245, 242, 94);"> <label> Enrollment</label> </td>
                 <td><input type="number" name="enrollment" id="enrollment"> </td>
             </tr>
             <tr>
-                <td> <label style="font-size:20px;color:red;">Email</label></td>
+                <td> <label style="font-size:20px;color:rgb(245, 242, 94);">Email</label></td>
                 <td> <input type="email" id="email" name="email" placeholder="example@example.com"></td>
             </tr>
             <tr>
-                <td>  <label style="font-size:20px;color:red;">Gender-</label> </td>
+                <td>  <label style="font-size:20px;color:rgb(245, 242, 94);">Gender-</label> </td>
                 <td><select name="sex" id="sex">
                     <option value="male">male</option>
                     <option value="female">female</option>
@@ -37,18 +37,18 @@
                 </select></td>
             </tr>
             <tr>
-                <td>  <lable style="font-size:20px;color:red;">D.O.B   </lable></td>
+                <td>  <lable style="font-size:20px;color:rgb(245, 242, 94);">D.O.B   </lable></td>
                 <td><input type="date" name="dob" id="date"> </td>
             </tr>
             <tr>
-                <td>  <label style="font-size:20px;color:red;">Choose College</label></td>
+                <td>  <label style="font-size:20px;color:rgb(245, 242, 94);">Choose College</label></td>
                 <td> <select default="JIIT-62" id="college" name="college">
                     <option value="JIIT-62">JIIT-62</option>
                     <option  value="JIIT-128">JIIT-128</option>
                 </select></td>
             </tr>
             <tr>
-                <td> <label style="font-size:20px;color:red;">Choose Branch</label></td>
+                <td> <label style="font-size:20px;color:rgb(245, 242, 94);">Choose Branch</label></td>
                 <td> <select default="CSE" id="dept" name="dept">
                     <option  value="cse">CSE</option>
                     <option  value="ECE">ECE</option>
@@ -56,7 +56,7 @@
                 </select></td>
             </tr>
             <tr>
-                <td>  <lable style="font-size:20px;color:red;">Select semester</lable> </td>
+                <td>  <lable style="font-size:20px;color:rgb(245, 242, 94);">Select semester</lable> </td>
                 <td><select name="sem">
                     <option value="1">I</option>
                     <option value="2">II</option>
@@ -71,25 +71,21 @@
                 </select></td>
             </tr>
             <tr>
-              <td>  <label style="font-size:20px;color:red;">HOMETOWN</label></td>  
+              <td>  <label style="font-size:20px;color:rgb(245, 242, 94);">HOMETOWN</label></td>  
               <td> <input type="text" name="home" id="home" ></td>
             </tr>
             <tr>
-                <td><label style="font-size:20px;color:red;">Set Password</label></td>
-
-                <td><input type="text" placeholder="alphanumeric" name="password" id="password"> </td>
+                <td><label style="font-size:20px;color:rgb(245, 242, 94);">Set Password</label></td>
+                <td><input type="password" placeholder="alphanumeric" name="password" id="password"> </td>
             </tr>
             <tr>
-            <td> <label style="font-size:20px;color:red;">Confirm Password</label></td>
-                <td><input type="text" placeholder="alphanumeric" name="password1" id="password1"> <div id="psver" style="font-size:20px;color:red;"> </div> </td>
-
-                <td>      <input type="text" placeholder="alphanumeric" name="password" id="password"></td>
-
+            <td> <label style="font-size:20px;color:rgb(245, 242, 94);">Confirm Password</label></td>
+                <td><input type="password" placeholder="alphanumeric" name="password1" id="password1"> <div id="psver" style="font-size:20px;color:rgb(245, 242, 94);"> </div> </td>
             </tr>
         </table>
         <br> <br>
         <button class="button" align=center name="submit" type="submit" value="submit" >Sign Up</button> <br> <br>
-        <label style="font-weight:bolder; font-family:Georgia, 'Times New Roman', Times, serif; font-size:40px; color:red;">Already have an account?</label><br><br>
+        <label style="font-weight:bolder; font-family:Georgia, 'Times New Roman', Times, serif; font-size:40px; color:rgb(245, 242, 94);">Already have an account?</label><br><br>
         <button class="button"><a href="login.php" text-color=white>Login</a></button>
     </form>
     </body>

@@ -12,13 +12,13 @@ h1
     word-spacing: 20pt;
     letter-spacing: 10pt;
     text-align:center;
-    color:indigo;
+    color:black;
     border-style:double;
-    border-color:blue;
+    border-color:white;
     padding:20px;
     border-radius:70px;
-    box-shadow: 5px 10px 20px blue;
-    background-image:linear-gradient(to bottom,rgb(197, 192, 192) 50%, #3C002F);
+    box-shadow:5px 10px 20px white;
+    background-image:linear-gradient(to bottom,rgb(245, 242, 94) 50%, #3C002F);
 }
 form{
     text-align:center;
@@ -31,12 +31,12 @@ form{
     line-height:60px;
     text-align:center;
     font-size:30px;
-    color:#FFFFFF;
+    color:black;
     text-shadow: 1px 1px px rgba(0,0,0,0.3);
     user-select:none;
     border-radius:30px;
     box-shadow: 0 5px 10px white;
-    background-image:linear-gradient(to bottom,rgb(33, 245, 33) 50%, #3C002F);
+    background-image:linear-gradient(to bottom,rgb(245, 242, 94) 50%, #3C002F);
     position:relative;
 }
 input{
