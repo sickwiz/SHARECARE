@@ -15,6 +15,8 @@ function valid()
     }
     var p = document.getElementById('password').value;
     var p1= document.getElementById('password1').value;
+
+
     if(p=="")
     {
         alert("password can't be empty");
@@ -41,6 +43,7 @@ function valid()
         alert("password must contain alphabets,digits and special symbols");
         return false;
     }
+
    if(!p1.match(p))
    {
      alert("passwords do not match");
