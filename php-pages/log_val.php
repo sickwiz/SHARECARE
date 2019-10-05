@@ -13,7 +13,10 @@ if(isset($_POST['submit']))
     $res=mysqli_query($con,$sq);
     $row=mysqli_fetch_assoc($res);
     if($row['PASSWORD']==$p)
-    echo "logged in";
+    {
+        echo "logged in";
+        
+    }
     else
     echo "invalid password";
 }
