@@ -1,7 +1,7 @@
 # SHARECARE
 SHARECARE SOLUTIONS IS A COLLEGE BASED JOURNEY PLANNER SERVICE .
 
-For people making any changes , the rules are as follows:-
+For people making any changes,the rules are as follows:-
 1)Make sure you upload your pages in the respective folders designated for the file types e.g HTML pages must be 
 uploaded into the html-sheets folder.
 
