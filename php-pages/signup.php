@@ -82,6 +82,19 @@
             <td> <label style="font-size:20px;color:rgb(245, 242, 94);">Confirm Password</label></td>
                 <td><input type="password" placeholder="alphanumeric" name="password1" id="password1"> <div id="psver" style="font-size:20px;color:rgb(245, 242, 94);"> </div> </td>
             </tr>
+            <tr> 
+            <td><label style="font-size:20px;color:rgb(245, 242, 94);">Security question</label> </td>
+            <td> <select name="security">
+            <option value="holiday">Your favorite holiday destination</option>
+                    <option value="movie">First movie you have watched</option>
+                    <option value="hospital">Hospital you were born in</option>
+                    <option value="web">your favorite website</option>
+            </select>
+            </tr>
+            <tr> 
+            <td> <label style="font-size:20px;color:rgb(245, 242, 94);">Your answer</label> </td>
+            <td> <input type="password" id="secpas" name="secpas" placeholde="one word answers please"> </td>
+            </tr>
         </table>
         <br> <br>
         <button class="button" align=center name="submit" type="submit" value="submit" >Sign Up</button> <br> <br>

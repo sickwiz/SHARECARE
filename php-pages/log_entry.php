@@ -19,7 +19,9 @@ if($con)
         }
         else
         {
-            $in_login="INSERT INTO LOGIN VALUES('$en','$pass')";
+            $sec=$_POST['security'];
+            $sec_ps=md5($_POST['secpas']);
+            $in_login="INSERT INTO LOGIN VALUES('$en','$pass','$sec','$sec_ps')";
             mysqli_query($con,$in_login);
             $n=$_POST['name'];
             $e=$_POST['email'];
