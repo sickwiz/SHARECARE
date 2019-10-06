@@ -9,7 +9,8 @@ if($con)
     if(isset($_POST["submit"]))
     {
         $en=$_POST['enrollment'];
-        $pass=md5($_POST['password']);
+        $pass=$_POST['password'];
+        $pass2=password_hash($pass,PASSWORD_ARGON2I);
         $sq="SELECT NAME FROM INFO WHERE ENROLLMENT='$en'";
         $res=mysqli_query($con,$sq);
         if(mysqli_num_rows($res)>0)
@@ -20,9 +21,12 @@ if($con)
         else
         {
             $sec=$_POST['security'];
-            $sec_ps=md5($_POST['secpas']);
-            $in_login="INSERT INTO LOGIN VALUES('$en','$pass','$sec','$sec_ps')";
-            mysqli_query($con,$in_login);
+            $sec_ps=($_POST['secpas']);
+            $sec_ps1=password_hash($sec_ps,PASSWORD_ARGON2I);
+            echo $sec_ps1; 
+            echo "<br>";
+            $in_login="INSERT INTO LOGIN VALUES('$en','$sec','$pass2','$sec_ps1')";
+            if(mysqli_query($con,$in_login)) echo "1 <br>";
             $n=$_POST['name'];
             $e=$_POST['email'];
             $d=$_POST['dob'];

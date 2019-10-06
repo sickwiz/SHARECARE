@@ -1,6 +1,12 @@
-    <html>
+ <html>
         <link href="loginstyle.css" rel="stylesheet">
         <body>
+		<ul id="menu">
+		<li id="item"><a href="homepage.html">HOME</a></li>
+		<li id="item"><a href="signup.php">SIGN UP</a></li>
+		<li id="item"><a href="forgot.html">FORGOT PASSWORD</a></li>
+		
+		</ul>
         <div id="login">   
             <center>
                 <img class="image" src="logo1.jpg" height=200 width=200 > </center>
@@ -10,7 +16,6 @@
                 <br>
                 <br>
                 <br>
-
             
             <form action="log_val.php" method="POST">
             
@@ -29,6 +34,6 @@
             <button align=center class="button" name="submit" type="submit" value="submit">Log In</button>
             
             </form>
-            <button style="transform:translate(850px,40px);"class="button" ><a href="signup.php">Sign up</a></button>
+            
 </body>
   </html>

@@ -9,6 +9,10 @@
         <script type="text/javascript" src="signup.js">  </script>
 </head>
 <body>
+        <ul id="menu">
+		<li id="item"><a href="homepage.html">HOME</a></li>
+		<li id="item"><a href="login.php">LOGIN</a></li>
+		</ul>
     
             <center>
                     <img class="image" src="logo1.jpg" height=200 width=200 > </center>
@@ -95,11 +99,10 @@
             <td> <label style="font-size:20px;color:rgb(245, 242, 94);">Your answer</label> </td>
             <td> <input type="password" id="secpas" name="secpas" placeholde="one word answers please"> </td>
             </tr>
+			
         </table>
         <br> <br>
         <button class="button" align=center name="submit" type="submit" value="submit" >Sign Up</button> <br> <br>
-        <label style="font-weight:bolder; font-family:Georgia, 'Times New Roman', Times, serif; font-size:40px; color:rgb(245, 242, 94);">Already have an account?</label><br><br>
-        <button class="button"><a href="login.php" text-color=white>Login</a></button>
     </form>
     </body>
 </html>
