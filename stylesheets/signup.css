@@ -69,3 +69,31 @@ body
     -o-background-size: cover;
     background-size: cover;
 }
+#menu
+{
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+}
+#item
+{
+	float: left;
+	
+}
+a:link, a:visited
+{
+	display:block;
+	width: 120px;
+	font-weight: bold;
+	color: white;
+	background-color: black;
+	text-align: center;
+	padding: 4px;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+a:hover, a:active
+{
+	color: red;
+}
