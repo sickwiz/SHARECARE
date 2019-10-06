@@ -1,0 +1,78 @@
+html
+{
+	background-color:black;
+}
+body
+{
+font-family: sans-serif;
+font-size: 1em;
+line-hieght: 1.5em;
+}
+#im1
+{
+	width: 50%;
+    border-radius: 30px;
+	transform:scale(0.7);
+	
+}
+#im2
+{
+    border-radius: 30px;
+	transform:scale(0.9);
+transform:translate(100px,-100px); 
+}
+h1
+{
+	text-align: center;
+	padding-top: 20px;
+	text-transform: uppercase;
+	color: #ffd88e;
+}
+h2
+{
+	color: red;
+	padding-top: 20px;
+	text-transform: uppercase;
+}
+#main
+{
+	border-radius: 50px;
+	background-color: yellow;
+	padding: 0cm 1em 1em;
+	padding-top: 10px;
+	
+}
+#foo
+{
+	text-align: center;
+	color: white;
+	text-size: 0.55em;
+}
+#menu
+{
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+}
+#item
+{
+	float: left;
+	
+}
+a:link, a:visited
+{
+	display:block;
+	width: 120px;
+	font-weight: bold;
+	color: white;
+	background-color: black;
+	text-align: center;
+	padding: 4px;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+a:hover, a:active
+{
+	color: red;
+}

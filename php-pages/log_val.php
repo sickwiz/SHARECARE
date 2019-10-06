@@ -8,11 +8,11 @@ $con= mysqli_connect($l,$user,$p,$d);
 if(isset($_POST['submit']))
 {
     $e=$_POST['enrollment'];
-    $p=md5($_POST['password']);
+    $p=($_POST['password']);
     $sq="SELECT PASSWORD FROM LOGIN WHERE ENROLLMENT='$e'";
     $res=mysqli_query($con,$sq);
     $row=mysqli_fetch_assoc($res);
-    if($row['PASSWORD']==$p)
+    if(password_verify($p,$row['PASSWORD']))
     {
         echo "logged in";
         
