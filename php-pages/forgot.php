@@ -17,7 +17,7 @@ if(isset($_POST['submit']))
     if($sq)
         $answer=$_POST['ans'];
         $match=mysqli_fetch_assoc($sq);
-        if((password_verify($answer,$match['SECURITY_PASS']) && $match['SECURITY_QUES']==$ques)
+        if((password_verify($answer,$match['SECURITY_PASS']) && $match['SECURITY_QUES']==$ques))
         { 
             $pchange="UPDATE LOGIN SET PASSWORD='$new_pass1' WHERE ENROLLMENT='$e'";
             if(mysqli_query($con,$pchange))
