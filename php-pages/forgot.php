@@ -14,17 +14,65 @@ if(isset($_POST['submit']))
     $new_pass1=password_hash($new_pass,PASSWORD_ARGON2I);
     $q="SELECT SECURITY_PASS,SECURITY_QUES FROM LOGIN WHERE ENROLLMENT='$e'";
     $sq=mysqli_query($con,$q);
-    if($sq)
-        $answer=$_POST['ans'];
-        $match=mysqli_fetch_assoc($sq);
-        if((password_verify($answer,$match['SECURITY_PASS']) && $match['SECURITY_QUES']==$ques))
+    $answer=$_POST['ans'];
+    $freeze="SELECT COUNTER FROM FORGOT WHERE ENROLLMENT='$e'";
+    $freeze1=mysqli_query($con,$freeze);
+    if(mysqli_num_rows($freeze1)==1)
+    {
+        $count=mysqli_fetch_assoc($freeze1);
+        $x=$count['COUNTER'];
+        if($x>=5)
+        echo "account siezed <br> contact admin";
+        else
+        {
+    $match=mysqli_fetch_assoc($sq);
+    if((password_verify($answer,$match['SECURITY_PASS']) && $match['SECURITY_QUES']==$ques))
         { 
             $pchange="UPDATE LOGIN SET PASSWORD='$new_pass1' WHERE ENROLLMENT='$e'";
             if(mysqli_query($con,$pchange))
-            echo "password changed succesfully";
+            {
+                echo "password changed succesfully";
+                mysqli_query($con,"DELETE FROM FORGOT WHERE ENROLLMENT='$e'");
+                header("location:loginhome.html");
+            }
             else
-            echo "failed";
+            {
+                echo "failed";
+            }
         }
     else
-    echo "wrong security answer or question";
+   { 
+       echo "wrong security answer or question";
+    $y=$x+1;  
+    $inc="UPDATE FORGOT SET COUNTER=$y WHERE ENROLLMENT='$e' ";
+    mysqli_query($con,$inc);
+    header("location:forgot.html");
+    echo "<br>".$c."attempts left";
+    }
+    }
 }
+else
+{
+    $match=mysqli_fetch_assoc($sq);
+    if((password_verify($answer,$match['SECURITY_PASS']) && $match['SECURITY_QUES']==$ques))
+        { 
+            $pchange="UPDATE LOGIN SET PASSWORD='$new_pass1' WHERE ENROLLMENT='$e'";
+            if(mysqli_query($con,$pchange))
+            {
+                echo "password changed succesfully";
+                header("location:loginhome.html");
+            }
+            else
+            {
+                echo "failed";
+            }
+        }  
+        else
+        {
+            $entry="INSERT INTO FORGOT VALUES(1,'$e')";
+            mysqli_query($con,$entry); 
+            header("location:forgot.html");
+        } 
+}
+}
+
