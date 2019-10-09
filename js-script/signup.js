@@ -8,15 +8,13 @@ function valid()
         alert("name can't be empty");
     return false;
     }
-   if(!name.match(/^[a-zA-z]+$/))
+   if(!name.match(/^[a-zA-z][\w]+$/))
     {
-        alert("name must be contain alphabets only");
+        alert("name must  contain alphabets only");
         return false;
     }
     var p = document.getElementById('password').value;
     var p1= document.getElementById('password1').value;
-
-
     if(p=="")
     {
         alert("password can't be empty");
@@ -37,13 +35,12 @@ function valid()
         alert("enter hometown");
     return false;
     }
-    var reg=/^[a-zA-z]+[0-9]+$/;
+    var reg=/^[\wa-zA-z]+[0-9]+$/;
    if(!reg.test(p))
     {
         alert("password must contain alphabets,digits and special symbols");
         return false;
     }
-
    if(!p1.match(p))
    {
      alert("passwords do not match");

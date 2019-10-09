@@ -5,9 +5,18 @@ $p="2409";
 $d="SHARECARE";
 $con= mysqli_connect($l,$user,$p,$d);
 if($con)
-echo "inside <br>";
 if(isset($_POST['submit']))
 {
+    if(empty($_SESSION))
+{
+  session_start();
+  if(isset($_SESSION['username']))
+    header("location:login_home.php");
+}
+else if(isset($_SESSION['username']))
+{
+  header("location:login_home.php");
+}
     $ques=$_POST['sec'];
     $e=$_POST['enrol'];
     $new_pass=$_POST['np'];
@@ -33,7 +42,7 @@ if(isset($_POST['submit']))
             {
                 echo "password changed succesfully";
                 mysqli_query($con,"DELETE FROM FORGOT WHERE ENROLLMENT='$e'");
-                header("location:loginhome.html");
+                header("location:login_home.php");
             }
             else
             {
@@ -60,7 +69,7 @@ else
             if(mysqli_query($con,$pchange))
             {
                 echo "password changed succesfully";
-                header("location:loginhome.html");
+                header("location:login_home.php");
             }
             else
             {
