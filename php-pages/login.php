@@ -1,10 +1,22 @@
+<?php
+if(empty($_SESSION))
+{
+  session_start();
+  if(isset($_SESSION['username']))
+    header("location:login_home.php");
+}
+else if(isset($_SESSION['username']))
+{
+  header("location:login_home.php");
+}
+?>
  <html>
         <link href="loginstyle.css" rel="stylesheet">
         <body>
 		<ul id="menu">
 		<li id="item"><a href="homepage.html">HOME</a></li>
 		<li id="item"><a href="signup.php">SIGN UP</a></li>
-		<li id="item"><a href="forgot.html">FORGOT PASSWORD</a></li>
+		<li id="item"><a href="forgot_page.php">FORGOT PASSWORD</a></li>
 		
 		</ul>
         <div id="login">   
