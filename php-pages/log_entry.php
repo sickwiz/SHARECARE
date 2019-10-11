@@ -13,6 +13,8 @@ if($con)
         $pass2=password_hash($pass,PASSWORD_ARGON2I);
         $sq="SELECT NAME FROM INFO WHERE ENROLLMENT='$en'";
         $res=mysqli_query($con,$sq);
+       /* if($res)
+        echo "hello <br>";*/
         if(mysqli_num_rows($res)>0)
         {
             echo "ACCOUNT ALREADY EXISTS WITH THE FOLLOWING ENROLLMENT NUMBER <br>";
@@ -23,10 +25,16 @@ if($con)
             $sec=$_POST['security'];
             $sec_ps=($_POST['secpas']);
             $sec_ps1=password_hash($sec_ps,PASSWORD_ARGON2I);
-            echo $sec_ps1; 
             echo "<br>";
+            echo $sec;
+            echo $sec_ps1;
+            echo $pass2;
+            echo $en;
             $in_login="INSERT INTO LOGIN VALUES('$en','$sec','$pass2','$sec_ps1')";
-            if(mysqli_query($con,$in_login)) echo "1 <br>";
+            if(mysqli_query($con,$in_login)) 
+                echo "1 <br>";
+            else
+            echo "2";
             $n=$_POST['name'];
             $e=$_POST['email'];
             $d=$_POST['dob'];

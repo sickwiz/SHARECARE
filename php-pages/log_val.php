@@ -13,6 +13,9 @@ if(isset($_POST['submit']))
     $p=($_POST['password']);
     $freeze="SELECT COUNTER FROM FORGOT WHERE ENROLLMENT='$e'";
     $freeze1=mysqli_query($con,$freeze);
+    $sname="SELECT NAME FROM INFO WHERE ENROLLMENT='$e'";
+    $sname1=mysqli_query($con,$sname);
+    $sname2=mysqli_fetch_assoc($sname1);
     if(mysqli_num_rows($freeze1)==1)
     {
         $count=mysqli_fetch_assoc($freeze1);
@@ -27,7 +30,7 @@ if(isset($_POST['submit']))
             if(password_verify($p,$row['PASSWORD']))
             {
                 mysqli_query($con,"DELETE FROM FORGOT WHERE ENROLLMENT='$e'");
-                $_SESSION['username']=$e;
+                $_SESSION['username']=$sname2['NAME'];
                 $_SESSION['password']=$p;
                 header("location:login_home.php");
             }
@@ -52,7 +55,7 @@ if(isset($_POST['submit']))
     if(password_verify($p,$row['PASSWORD']))
     {
         //echo "logged in";
-        $_SESSION['username']=$e;
+        $_SESSION['username']=$sname2['NAME'];
         $_SESSION['password']=$p;
         header("location:login_home.php");
     }
