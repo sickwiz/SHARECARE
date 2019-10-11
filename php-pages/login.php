@@ -14,7 +14,7 @@ else if(isset($_SESSION['username']))
         <link href="loginstyle.css" rel="stylesheet">
         <body>
 		<ul id="menu">
-		<li id="item"><a href="homepage.html">HOME</a></li>
+		<li id="item"><a href="homepage.php">HOME</a></li>
 		<li id="item"><a href="signup.php">SIGN UP</a></li>
 		<li id="item"><a href="forgot_page.php">FORGOT PASSWORD</a></li>
 		

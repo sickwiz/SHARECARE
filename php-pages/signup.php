@@ -1,16 +1,4 @@
-<?php
-if(empty($_SESSION))
-{
-    session_start();
-    if(!isset($_SESSION['username']))
-    header("location:login.php");
-}
-else if(!isset($_SESSION['username']))
-    {
-    header("location:login.php");
-    exit;
-    } 
-?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -23,7 +11,7 @@ else if(!isset($_SESSION['username']))
 </head>
 <body>
         <ul id="menu">
-		<li id="item"><a href="homepage.html">HOME</a></li>
+		<li id="item"><a href="homepage.php">HOME</a></li>
 		<li id="item"><a href="login.php">LOGIN</a></li>
 		</ul>
     
