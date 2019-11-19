@@ -37,7 +37,9 @@ SHARE CARE SOLUTION
 <h3>PLANING A JOURNEY</h3>
 <ul id="men">
 <li id="it" class="it">WANNA RIDE! <li><input type="text" placeholder="WHERE" id="itu"></li> </li> <br>
-<li id="it">HOME TICKET <li><input type="text" placeholder="HOME CITY?" id="itu"></li> </li><br>
+<li id="it"><form action="hometown.php" method=POST > HOME
+<input type="submit" value="submit" name="submit"/> </form>
+</li> </li><br>
 <li id="it">PLAN FUTURE RIDE <li><input type="text" placeholder="WHERE" id="itu"><input type="date" placeholder="date" id="itu"><input type="time" placeholder="time" id="itu"></li> </li><br>
 </ul>
 
