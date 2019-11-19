@@ -9,7 +9,7 @@ if(isset($_POST['submit']))
 {
    if(empty($_SESSION))
         session_start();             //starts the session
-    $e=$_POST['enrollment'];
+    $e=($_POST['enrollment']);
     $p=($_POST['password']);
     $freeze="SELECT COUNTER FROM FORGOT WHERE ENROLLMENT='$e'";
     $freeze1=mysqli_query($con,$freeze);
@@ -31,7 +31,8 @@ if(isset($_POST['submit']))
             {
                 mysqli_query($con,"DELETE FROM FORGOT WHERE ENROLLMENT='$e'");
                 $_SESSION['username']=$sname2['NAME'];
-                $_SESSION['password']=$p;
+               $_SESSION['password']=$p;
+                $_SESSION['userid']=$e;
                 header("location:login_home.php");
             }
             else
@@ -57,6 +58,7 @@ if(isset($_POST['submit']))
         //echo "logged in";
         $_SESSION['username']=$sname2['NAME'];
         $_SESSION['password']=$p;
+        $_SESSION['userid']=$e;
         header("location:login_home.php");
     }
     else
