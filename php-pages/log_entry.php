@@ -46,7 +46,7 @@ if($con)
             $in_info="INSERT INTO INFO VALUES('$n','$e','$gen','$d','$col','$branch','$sem','$h','$en')";
             if(mysqli_query($con,$in_info))
             {
-                echo "account created succesfully , now you can login <br>";
+                header("location:login.php");
             }
             else
             {
