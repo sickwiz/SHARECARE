@@ -21,13 +21,17 @@ SHARE CARE SOLUTION
 <body>
 <div>
 <h1>SHARECARE SOLUTIONS INDIA</h1>
+<center> <img class="image" src="logo1.jpg" height=200 width=200 style="border-radius:100px; transform:scale(0.7);" > </center>
 
 <p>
 <ul id="menu">
-<li id="item"><a href="logout.php">LOGOUT</a></li>
 <li id="item"> <?php echo "Welcome ".$_SESSION['username']; ?> </li>
+<li id="item"> <a href="inbox.php">PENDING HOME REQUESTS </a> </li>
+<li id="item"> <a href="confirm.php"> CONFIRMED HOME REQUESTS </a> </li>
+<li id="item"> <a href="confirm.php"> PENDING TRAVEL REQUESTS </a> </li>
+<li id="item"> <a href=""> CONFIRMED TRAVEL REQUESTS </a> </li>
+<li id="item"><a href="logout.php">LOGOUT</a></li>
 </ul>
-</p>
 <div id="im">
 <img id="im1" src="cabim.jpeg">
 
@@ -36,13 +40,13 @@ SHARE CARE SOLUTION
 </div>
 <h3>PLANING A JOURNEY</h3>
 <ul id="men">
-<li id="it" class="it">WANNA RIDE! <li><input type="text" placeholder="WHERE" id="itu"></li> </li> <br>
 <li id="it"><form action="hometown.php" method=POST > HOME
 <input type="submit" value="submit" name="submit"/> </form>
 </li> </li><br>
-<li id="it">PLAN FUTURE RIDE <li><input type="text" placeholder="WHERE" id="itu"><input type="date" placeholder="date" id="itu"><input type="time" placeholder="time" id="itu"></li> </li><br>
+<form action="travel_val.php" method="POST">
+<li id="it">PLAN FUTURE RIDE <li><input type="text" name='des' placeholder="WHERE" id="itu"><input type="date" placeholder="date" name='dat' id="itu"></li> </li><br>
 </ul>
-
+<center><button align=center class="plan" name="plan" type="submit" value="submit" > plan journey </button> </center> </form>
 <div id="main">
 
 <p><h2>About share care solution</h2></p>
@@ -68,10 +72,9 @@ Apart from this, we are also including the home travel button so that people fro
 </p>
 </div>
 
-<p id="foo">Copyright &copy; share care solutions<br>
-designed by &copy; aamir ahmad<br>
-designed by &copy; vivek dwivedi<br>
-</P>
+<p id="foo">Copyright &copy; SHARECARE SOLUTIONS <br>
+<center> <img class="image" src="logo1.jpg" height=200 width=200 style="border-radius:100px; border-style:double; border-color:blue;border-width:5px; transform:scale(0.5);" > </center>
+</p>
 
 
 </body>
