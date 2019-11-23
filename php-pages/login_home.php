@@ -24,14 +24,40 @@ SHARE CARE SOLUTION
 <center> <img class="image" src="logo1.jpg" height=200 width=200 style="border-radius:100px; transform:scale(0.7);" > </center>
 
 <p>
-<ul id="menu">
-<li id="item"> <?php echo "Welcome ".$_SESSION['username']; ?> </li>
-<li id="item"> <a href="inbox.php">PENDING HOME REQUESTS </a> </li>
-<li id="item"> <a href="confirm.php"> CONFIRMED HOME REQUESTS </a> </li>
-<li id="item"> <a href="confirm.php"> PENDING TRAVEL REQUESTS </a> </li>
-<li id="item"> <a href=""> CONFIRMED TRAVEL REQUESTS </a> </li>
-<li id="item"><a href="logout.php">LOGOUT</a></li>
+<div class="navbar">
+<ul>
+<li id="item"><b><a href="logout.php">LOGOUT</a></b></li>
+<li id="item" style="transform:translate(-20px,15px);"><b><?php echo "Welcome ".$_SESSION['username']; ?> </b></li>
 </ul>
+
+<div class="dropdown">
+  <button class="dropbtn">REQUESTS
+<i class="fa fa-caret-down"></i>
+  </button>
+  <div class="dropdown-content">
+<ul>
+<a href="inbox.php">PENDING HOME</a> 
+<a href="confirm.php"> CONFIRMED HOME </a> 
+<a href="confirm.php"> PENDING TRIP </a> 
+<a href=""> CONFIRMED TRIP </a> 
+</ul>
+ </div>
+  </div>
+
+
+<div style="float= left;" class="dropdown">
+  <button class="dropbtn">PLAN JOURNEY
+<i class="fa fa-caret-down"></i>
+  </button>
+  <div class="dropdown-content">
+<ul>
+<a href="">HOME</a> 
+<a href="">PLAN A TRIP</a> 
+<a href="">SEE LOCAL PLAN</a>  
+</ul>
+ </div>
+  </div>
+</div>
 <div id="im">
 <img id="im1" src="cabim.jpeg">
 
