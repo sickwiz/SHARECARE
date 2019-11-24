@@ -1,0 +1,52 @@
+
+html {
+    background-color: rgb(162, 162, 214);
+}
+body {
+    font-family: sans-serif;
+    font-size: 1em;
+    line-height: 1.5em;
+}
+table, th, td {
+    border: 5px solid black;
+    border-radius:10px;
+    border-color: rgb(43, 36, 36);
+  }
+ #head {
+    background-color: #4CAF50;
+    color: rgb(88, 17, 17);
+    text-shadow:10px;
+    
+  }
+  h1 {
+    text-align: center;
+    padding-top: 20px;
+    text-transform: uppercase;
+    color: #ffd88e;
+}
+.but {
+    background-color: green;
+    border: none;
+    color: white;
+    padding: 15px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+  }
+  .but:hover {
+    background-color: rgb(180, 21, 45); 
+    color: white;
+  }
+  #it
+  {
+    transform: translate(1px, -10px);
+      float: left;
+      
+  }
+  .navbar {
+    overflow: hidden;
+    background-color: green;
+    font-family: Arial;
+  }
+  

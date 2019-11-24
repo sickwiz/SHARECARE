@@ -26,8 +26,8 @@ SHARE CARE SOLUTION
 <p>
 <div class="navbar">
 <ul>
-<li id="item"><b><a href="logout.php">LOGOUT</a></b></li>
-<li id="item" style="transform:translate(-20px,15px);"><b><?php echo "Welcome ".$_SESSION['username']; ?> </b></li>
+<b id="item"><a href="logout.php">LOGOUT</a></b>
+<b id="item" style="transform:translate(-20px,20px);"><?php echo "WELCOME ".$_SESSION['username']; ?> </b>
 </ul>
 
 <div class="dropdown">
@@ -92,9 +92,7 @@ Apart from this, we are also including the home travel button so that people fro
 
 <div>
 <p align = "center">
-<video controls>
-< source src="">
-</video>
+<video src= "123.webm" autoplay controls></video>
 </p>
 </div>
 

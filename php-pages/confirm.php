@@ -56,9 +56,14 @@ else if(!isset($_SESSION['username']))
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="">
     </head>
+    <link rel="stylesheet" type="text/css" href="innerstyle.css">
     <body>
+    <center> <img class="image" src="logo1.jpg" height=200 width=200 style="border-radius:100px; transform:scale(0.7);" > </center>
+    <h1>SHARECARE SOLUTIONS INDIA</h1> 
     <table cellpadding=20px border=20px align=center>
-    <tr>
+    <center><b>YOUR CONFIRM TRIPS ARE AS FOLLOWS</b></center> <br>
+    <hr>
+    <tr id="head">
     <td>NAME</td>
     <td> EMAIL </td> 
     <td> TYPE </td>
@@ -89,5 +94,6 @@ else if(!isset($_SESSION['username']))
       </td>
      </tr>
      </table>
+     <center> <a href="login_home.php"><input type='button' class='but' value='back'></a></center>
     </body>
 </html>
