@@ -14,7 +14,7 @@ else if(!isset($_SESSION['username']))
     } 
     if(isset($_POST['submit']))
     {
-        echo "hello";
+        
         $s=$_SESSION['userid'];
         $del=$_POST['del_list'];
         for($x=0;$x<sizeof($del);$x++)
@@ -22,6 +22,6 @@ else if(!isset($_SESSION['username']))
             $q="DELETE FROM MESSAGES WHERE SENDER='$del[$x]' AND RECIEVER ='$s'";
             mysqli_query($con,$q);
         }
-        header("location:inbox.php");
+       header("location:inbox.php");
     }
 ?>

@@ -42,20 +42,21 @@ else if(!isset($_SESSION['username']))
 {
     var x=document.getElementById('en');
     //var y="<input type='number' placeholder='enrollment'/> <br> <input type=button value='submit'/>";
-    x.innerHTML+="<input type='number' name='del_list[]' placeholder='enrollment'/> ";
+    x.innerHTML+="<center><p><input type='number' name='del_list[]' placeholder='enrollment'/></p></center>";
     var y=document.getElementById('del');
-    y.innerHTML="<input type=button value='delete another' onclick='create_del()'/>";
+    y.innerHTML="<center><p><input type=button value='delete another' onclick='create_del()'  class='but'/></p></center>";
 }
 
 function create_accep()
 {
     var x=document.getElementById('en1');
     //var y="<input type='number' placeholder='enrollment'/> <br> <input type=button value='submit'/>";
-    x.innerHTML+="<input type='number' name='accep_list[]' placeholder='enrollment'/> ";
+    x.innerHTML+="<center><p><input type='number' name='accep_list[]' placeholder='enrollment'/></p></center> ";
     var y=document.getElementById('del1');
-    y.innerHTML="<input type=button value='accept another' onclick='create_accep()'/>";
+    y.innerHTML="<center><p><input type=button value='accept another' onclick='create_accep()' class='but'/></p></center>";
 }
         </script>
+        <link rel="stylesheet" type="text/css" href="innerstyle.css">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -65,10 +66,36 @@ function create_accep()
         <link rel="stylesheet" href="">
     </head>
     <body>
-    <table align=center cellpadding=20px border=20px>
-    THESE PEOPLE WANT TO TRAVEL WITH YOU <br>
+    <center> <img class="image" src="logo1.jpg" height=200 width=200 style="border-radius:100px; transform:scale(0.7);" > </center>
+    <h1>SHARECARE SOLUTIONS INDIA</h1> 
+   
+   <div class=navbar>
+    <center><p>
+    <ul>
+    <b align= center id="it"><input type="button" class="but" onclick="create_del()" value="DELETE REQUEST"/></b>
+    <!-- <form action='del.php' method=POST>
+    <div id=en> </div>
+    <div id=del> </div>
+    <b align= center id="it"><input type=submit class="but" value='DELETE MESSEGE' name='submit'/></b>
+    </form> -->
+     <b align= center id="it"><input type="button" class="but" onclick="create_accep()" value="ACCEPT REQUEST"/></b>
+    <!-- <form action='accept.php' method=POST>
+    <div id=en1> </div>
+    <div id=del1> </div>
+    <b align= center id="it"><input type=submit class="but" value='ACCEPT REQUESTS' name='submit'/></b>
+    </form> -->
+    </ul>
+    </p></center>
+</div>
+
+
+    <br>   
+    <table align=center cellpadding=20px border=10px BORDERCOLOR=RED>
+    <br>
+    <br>   
+    <center><b>THESE PEOPLE WANT TO TRAVEL WITH YOU</b></center> <br>
     <hr>
-    <tr>
+    <tr id="head">
     <td> SENDER </td>
     <td> TYPE   </td>
     <td> SENDER'S NAME </td>
@@ -99,24 +126,16 @@ function create_accep()
      </td>
     </tr>
     </table>
-    CLICK TO DELETE REQUEST <input type="button" onclick="create_del()" value="enter"/>
-    <form action=del.php method=POST>
+    <form action='del.php' method=POST>
     <div id=en> </div>
     <div id=del> </div>
-    <br>
-    <input type=submit value='delete messages' name='submit'/>
+    <p><center><b align= center ><input type=submit class="but" value='DELETE MESSEGE' name='submit'/></b></center></p>
     </form>
-    CLICK TO accept REQUEST <input type="button" onclick="create_accep()" value="enter"/>
-    <form action=accept.php method=POST>
+    <form action='accept.php' method=POST>
     <div id=en1> </div>
     <div id=del1> </div>
-    <br>
-    <input type=submit value='accept request' name='submit'/>
+    <p><center><b align= center><input type=submit class="but" value='ACCEPT REQUESTS' name='submit'/></b></center></p>
     </form>
-
-    <hr>
-    THESE PEOPLE HAVE ACCEPTED YOUR TRAVEL REQUEST 
-    <br>
-    <hr>   
+   <p><center> <a href="login_home.php"><input type='button' class='but' value='back'></a></center></p>
     </body>
 </html>

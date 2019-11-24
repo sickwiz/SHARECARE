@@ -1,3 +1,7 @@
+*{
+  margin: 0;
+  padding: 0;
+}
 html {
     background-color: black;
 }
@@ -71,7 +75,7 @@ h3 {
   font-size: 16px;
   color: white;
   text-align: center;
-  padding: 14px 16px;
+  padding: 18px 16px;
   text-decoration: none;
 }
 
@@ -123,6 +127,7 @@ h3 {
 
 #item {
     float: right;
+    font-family: Arial;
     color: white;
 }
 
