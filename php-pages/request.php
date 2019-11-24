@@ -1,3 +1,14 @@
+<html>
+<body>
+<link rel="stylesheet" type="text/css" href="innerstyle.css">
+<center> <img class="image" src="logo1.jpg" height=200 width=200 style="border-radius:100px; transform:scale(0.7);" > </center>
+    <h1>SHARECARE SOLUTIONS INDIA</h1>
+    <hr>
+   <center><font size= "6"><b><span> REQUEST DETAILS </span></font size></b></center>
+   <hr>
+    </body>
+    </html>
+
 <?php
 include "connection.php";
 if(empty($_SESSION))
@@ -19,25 +30,35 @@ else if(!isset($_SESSION['username']))
             $to=$_POST['to'];
             $check="SELECT SENDER FROM MESSAGES WHERE SENDER='$from' AND RECIEVER='$to'";
             $check1=mysqli_query($con,$check);
-            $check2="SELECT SENDER FROM MESSAGES WHERE SENDER='$to' AND RECIEVER='$from'";
+            $check2="SELECT SENDER,STATUS FROM MESSAGES WHERE SENDER='$to' AND RECIEVER='$from'";
             $check3=mysqli_query($con,$check2);
             if(mysqli_num_rows($check1)>0)
             {
-                echo "YOU HAVE ALREADY REQUESTED THIS PERSON ";
+                echo "<center><p><b>YOU HAVE ALREADY REQUESTED THIS PERSON </b></p></center>";
             }
             else if (mysqli_num_rows($check3)>0)
             {
-                echo "this person has already requested you <br>";
-                echo "<form action='inbox.php'>click to accept request <input type=submit value='accept'/> </form> ";
+                $check4=mysqli_fetch_assoc($check3);
+                if($check4['STATUS']==0)
+                {
+                echo "<p><center><b>"."this person has already requested you <br>"."</b></center></p>";
+                echo "<form action='inbox.php'><center><p><b>click to accept request</b></p></center> <br> <center><p><input type=submit class='but' value='accept'/></p></center>/> </form> ";
+                }
+                else
+                {
+                    echo "<center><p><b>THIS TRAVEL REQUEST IS ALREADY CONFIRMED </b></p></center> <br>";
+                echo "<form action='confirm.php'><center><p><b>click to see details</b></p></center> <br><center><p><input type=submit class='but' value='DETAILS'</p></center>/> </form> ";
+                }
             }
             else {
                 $req="INSERT INTO MESSAGES VALUES ('$from','$to','home',0)";
             if(mysqli_query($con,$req))
             {
-                echo "message succesfully sent to ".$to;
+                echo "<p><center><b>message succesfully sent to ".$to."</b> </center></p>";
             }
             }
-            
+            echo "<p><center> <a href='login_home.php'><input type='button' class='but' value='back'></a></center></p>";
         }
     }
+   
 ?>
