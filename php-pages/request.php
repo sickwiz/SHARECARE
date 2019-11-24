@@ -1,10 +1,3 @@
-<html>
-<body>
-<link rel="stylesheet" type="text/css" href="innerstyle.css">
-<center> <img class="image" src="logo1.jpg" height=200 width=200 style="border-radius:100px; transform:scale(0.7);" > </center>
-    <h1>SHARECARE SOLUTIONS INDIA</h1> 
-</body>
-</html>
 <?php
 include "connection.php";
 if(empty($_SESSION))
@@ -26,23 +19,25 @@ else if(!isset($_SESSION['username']))
             $to=$_POST['to'];
             $check="SELECT SENDER FROM MESSAGES WHERE SENDER='$from' AND RECIEVER='$to'";
             $check1=mysqli_query($con,$check);
+            $check2="SELECT SENDER FROM MESSAGES WHERE SENDER='$to' AND RECIEVER='$from'";
+            $check3=mysqli_query($con,$check2);
             if(mysqli_num_rows($check1)>0)
             {
-                echo "<center><b>"."you have already requested this person"."</center></b>";
+                echo "YOU HAVE ALREADY REQUESTED THIS PERSON ";
+            }
+            else if (mysqli_num_rows($check3)>0)
+            {
+                echo "this person has already requested you <br>";
+                echo "<form action='inbox.php'>click to accept request <input type=submit value='accept'/> </form> ";
             }
             else {
                 $req="INSERT INTO MESSAGES VALUES ('$from','$to','home',0)";
             if(mysqli_query($con,$req))
             {
-                echo "<center><b>"."message succesfully sent to ".$to."</center></b>";
+                echo "message succesfully sent to ".$to;
             }
             }
-        
+            
         }
     }
 ?>
-<html>
-<body>
-<p><center> <a href="login_home.php"><input type='button' class='but' value='back'></a></center></p>
-</body>
-</html>
