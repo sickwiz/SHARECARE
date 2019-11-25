@@ -51,9 +51,10 @@ SHARE CARE SOLUTION
   </button>
   <div class="dropdown-content">
 <ul>
-<a href="">HOME</a> 
+<a href=""><form action="hometown.php" method=POST >
+<input type="submit" value="HOME" class="but" name="submit"/> </form></a>
 <a href="">PLAN A TRIP</a> 
-<a href="">SEE LOCAL PLAN</a>  
+<a href="">SEE LOCAL PLAN</a> 
 </ul>
  </div>
   </div>
@@ -66,9 +67,9 @@ SHARE CARE SOLUTION
 </div>
 <h3>PLANING A JOURNEY</h3>
 <ul id="men">
-<li id="it"><form action="hometown.php" method=POST > HOME
+<!-- <li id="it"><form action="hometown.php" method=POST > HOME
 <input type="submit" value="submit" name="submit"/> </form>
-</li> </li><br>
+</li> </li><br> -->
 <form action="travel_val.php" method="POST">
 <li id="it">PLAN FUTURE RIDE <li><input type="text" name='des' placeholder="WHERE" id="itu"><input type="date" placeholder="date" name='dat' id="itu"></li> </li><br>
 </ul>
