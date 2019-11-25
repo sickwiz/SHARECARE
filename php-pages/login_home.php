@@ -38,13 +38,11 @@ SHARE CARE SOLUTION
 <ul>
 <a href="inbox.php">PENDING HOME</a> 
 <a href="confirm.php"> CONFIRMED HOME </a> 
-<a href="confirm.php"> PENDING TRIP </a> 
+<a href=""> PENDING TRIP </a> 
 <a href=""> CONFIRMED TRIP </a> 
 </ul>
  </div>
   </div>
-
-
 <div style="float= left;" class="dropdown">
   <button class="dropbtn">PLAN JOURNEY
 <i class="fa fa-caret-down"></i>
@@ -53,8 +51,8 @@ SHARE CARE SOLUTION
 <ul>
 <a href=""><form action="hometown.php" method=POST >
 <input type="submit" value="HOME" class="but" name="submit"/> </form></a>
-<a href="">PLAN A TRIP</a> 
-<a href="">SEE LOCAL PLAN</a> 
+<a href="trip.php">PLAN A TRIP</a> 
+<a href="local_plan.php">SEE LOCAL PLAN</a> 
 </ul>
  </div>
   </div>
@@ -65,15 +63,6 @@ SHARE CARE SOLUTION
 <img id="im2" src="share1.jpeg">
 </div>
 </div>
-<h3>PLANING A JOURNEY</h3>
-<ul id="men">
-<!-- <li id="it"><form action="hometown.php" method=POST > HOME
-<input type="submit" value="submit" name="submit"/> </form>
-</li> </li><br> -->
-<form action="travel_val.php" method="POST">
-<li id="it">PLAN FUTURE RIDE <li><input type="text" name='des' placeholder="WHERE" id="itu"><input type="date" placeholder="date" name='dat' id="itu"></li> </li><br>
-</ul>
-<center><button align=center class="plan" name="plan" type="submit" value="submit" > plan journey </button> </center> </form>
 <div id="main">
 
 <p><h2>About share care solution</h2></p>
