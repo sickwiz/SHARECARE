@@ -13,7 +13,7 @@ else if(!isset($_SESSION['username']))
     exit;
     } 
     $u=$_SESSION['userid'];
-    $mes="SELECT SENDER,TYPE FROM MESSAGES WHERE RECIEVER='$u' AND STATUS=0 AND TYPE='home'";
+    $mes="SELECT SENDER,TYPE FROM MESSAGES WHERE RECIEVER='$u' AND STATUS=0 AND TYPE <> 'home'";
     $mes1=mysqli_query($con,$mes);
     if(mysqli_num_rows($mes1)>0)
     {
@@ -42,7 +42,7 @@ function create_del()
 {
     var x=document.getElementById('en2');
     //var y="<input type='number' placeholder='enrollment'/> <br> <input type=button value='submit'/>";
-    x.innerHTML+="<center><p><input type='number' name='del_list[]' placeholder='enrollment'/></p></center> ";
+    x.innerHTML+="<center><p><input type='number' name='del_list[]' placeholder='enrollment'/><input type='number' name='pl_list[]' placeholder='enrollment'/></p></center> ";
     var y=document.getElementById('moredel');
     y.innerHTML="<center><p><input type=button value='delete another' onclick='create_del()' class='but'/></p></center>";
     var z=document.getElementById('delbut');
@@ -53,7 +53,7 @@ function create_accep()
 {
     var x=document.getElementById('en1');
     //var y="<input type='number' placeholder='enrollment'/> <br> <input type=button value='submit'/>";
-    x.innerHTML+="<center><p><input type='number' name='accep_list[]' placeholder='enrollment'/></p></center> ";
+    x.innerHTML+="<center><p><input type='number' name='accep_list[]' placeholder='enrollment'/><input type='number' name='place_list[]' placeholder='place'/></p></center> ";
     var y=document.getElementById('moreaccep');
     y.innerHTML="<center><p><input type=button value='accept another' onclick='create_accep()' class='but'/></p></center>";
     var z=document.getElementById('acbut');
@@ -74,7 +74,7 @@ function create_accep()
     <h1>SHARECARE SOLUTIONS INDIA</h1> <br> <br>
    
    <div class=navbar>
-   <center><b> <div id='head1'>FOLLOWING PEOPLE FROM YOUR HOMETOWN HAVE REQUESTED YOU </div></b></center> <br>
+   <center><b> <div id='head1'>FOLLOWING PEOPLE REQUESTED YOU FOR LOCAL TRIPS </div></b></center> <br>
 </div> 
     <table align=center cellpadding=20px border=10px BORDERCOLOR=RED>
     <hr>

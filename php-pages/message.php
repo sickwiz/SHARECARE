@@ -38,7 +38,9 @@ function create_button()
 {
     var x=document.getElementById('butarea');
     //var y="<input type='number' placeholder='enrollment'/> <br> <input type=button value='submit'/>";
-    x.innerHTML="<center><input type='number' name='to' placeholder='enrollment'/> <br> <input type='submit' class='but' value='request' name='request'/></center>";
+    x.innerHTML+="<center><input type='number' name='to[]' placeholder='enrollment'/> <br></center>";
+    var y=document.getElementById('morereq');
+    y.innerHTML="<center><input type='button' value='request another' class='but' onclick='create_button()'/> <br> <br> <br> <input type='submit' class='but' value='request' name='request'/></center>";
 }
 </script>
  
@@ -46,6 +48,8 @@ function create_button()
 <br>
 <p><center><input type="button" class="but" onclick="create_button()" value="REQUEST SOMEONE"/></center></p>
 <div id="butarea"> </div>
+<div id='morereq'> </div>
+
 <br>
 <p><center> <a href="login_home.php"><input type='button' class='but' value='back'></a></center></p>
 </form>

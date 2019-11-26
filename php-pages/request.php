@@ -28,37 +28,41 @@ else if(!isset($_SESSION['username']))
         {
             $from=$_SESSION['userid'];
             $to=$_POST['to'];
-            $check="SELECT SENDER FROM MESSAGES WHERE SENDER='$from' AND RECIEVER='$to' AND TYPE='home'";
+            $s=sizeof($to);
+            for($x=0;$x<$s;$x++)
+            {
+            $check="SELECT SENDER FROM MESSAGES WHERE SENDER='$from' AND RECIEVER='$to[$x]' AND TYPE='home'";
             $check1=mysqli_query($con,$check);
-            $check2="SELECT SENDER,STATUS FROM MESSAGES WHERE SENDER='$to' AND RECIEVER='$from' AND TYPE='home'";
+            $check2="SELECT SENDER,STATUS FROM MESSAGES WHERE SENDER='$to[$x]' AND RECIEVER='$from' AND TYPE='home'";
             $check3=mysqli_query($con,$check2);
             if(mysqli_num_rows($check1)>0)
             {
-                echo "<center><p><b>YOU HAVE ALREADY REQUESTED THIS PERSON </b></p></center>";
+                echo "<center><p><b>YOU HAVE ALREADY REQUESTED .$to[$x]. </b></p></center>";
             }
             else if (mysqli_num_rows($check3)>0)
             {
                 $check4=mysqli_fetch_assoc($check3);
                 if($check4['STATUS']==0)
                 {
-                echo "<p><center><b>"."this person has already requested you <br>"."</b></center></p>";
+                echo "<p><center><b>".$to[$x]."has already requested you <br>"."</b></center></p>";
                 echo "<form action='inbox.php'><center><p><b>click to accept request</b></p></center> <br> <center><p><input type=submit class='but' value='accept'/></p></center>/> </form> ";
                 }
                 else
                 {
-                    echo "<center><p><b>THIS TRAVEL REQUEST IS ALREADY CONFIRMED </b></p></center> <br>";
-                echo "<form action='confirm.php'><center><p><b>click to see details</b></p></center> <br><center><p><input type=submit class='but' value='DETAILS'</p></center>/> </form> ";
+                    echo "<center><p><b>".$to[$x]." has already confirmed your request </b></p></center>";
+                echo "<form action='confirm.php'><center><p><input type=submit class='but' value=' SEE DETAILS'</p></center>/> </form> ";
                 }
             }
             else {
-                $req="INSERT INTO MESSAGES VALUES ('$from','$to','home',0)";
+                $req="INSERT INTO MESSAGES VALUES ('$from','$to[$x]','home',0)";
             if(mysqli_query($con,$req))
             {
-                echo "<p><center><b>message succesfully sent to ".$to."</b> </center></p>";
+                echo "<p><center><b>message succesfully sent to ".$to[$x]."</b> </center></p>";
             }
             }
             echo "<p><center> <a href='login_home.php'><input type='button' class='but' value='back'></a></center></p>";
         }
+    }
     }
    
 ?>

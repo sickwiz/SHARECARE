@@ -25,15 +25,26 @@ if(isset($_POST['plan']))
 {
   $des=$_POST['des'];
   $dat=$_POST['dat'];
-	$en=$_SESSION['userid'];
-echo "<b><center>TRIP SUCCESSFULLY PLANNED FOR ".$en."</b></center>";
-echo "<b><center>ON ".$dat."</b></center>";
+  $en=$_SESSION['userid'];
+  $check="SELECT ENROLLMENT,DESTINATION, DATE FROM TRAVEL WHERE DESTINATION='$des' AND ENROLLMENT='$en' AND DATE='$dat'";
+  $check1=mysqli_query($con,$check);
+  if(mysqli_num_rows($check1)>0)
+  {
+    echo "<b><center>YOU HAVE ALREADY MENTIONED THIS PLAN</b></center>";
+  }
+  else
+   {
   $quer="INSERT INTO TRAVEL VALUES ('$en','$des','$dat')";
   $s=mysqli_query($con,$quer);
    if(!$s)
-    echo "sdfgh".mysqli_error;
+   echo "<b><center>AN ERROR OCCURED <br> PLEASE TRY AGAIN <br>WE REGRET THE INCONVENIENCE CAUSED</b></center>";
    else 
+   {
+    echo "<b><center>TRIP SUCCESSFULLY PLANNED FOR ".$en."</b></center>";
+    echo "<b><center>ON ".$dat."</b></center>";
 echo"<center><b>PLEASE WAIT FOR THE CONFIRMATION FROM OTHER SIDE</b></center>";
+}
+   }
 }
 echo "<p><center> <a href='login_home.php'><input type='button' class='but' value='back'></a></center></p>";
 
