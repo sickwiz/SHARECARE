@@ -20,8 +20,9 @@ SHARE CARE SOLUTION
 </head>
 <body>
 <div>
-<h1>SHARECARE SOLUTIONS INDIA</h1>
 <center> <img class="image" src="logo1.jpg" height=200 width=200 style="border-radius:100px; transform:scale(0.7);" > </center>
+<h1>SHARECARE SOLUTIONS INDIA</h1>
+
 
 <p>
 <div class="navbar">
@@ -38,8 +39,8 @@ SHARE CARE SOLUTION
 <ul>
 <a href="inbox.php">PENDING HOME</a> 
 <a href="confirm.php"> CONFIRMED HOME </a> 
-<a href=""> PENDING TRIP </a> 
-<a href=""> CONFIRMED TRIP </a> 
+<a href="pending_trip.php"> PENDING TRIP </a> 
+<a href="local_confirm.php"> CONFIRMED TRIP </a> 
 </ul>
  </div>
   </div>

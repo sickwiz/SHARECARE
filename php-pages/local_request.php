@@ -44,13 +44,13 @@ else if(!isset($_SESSION['username']))
                 $check4=mysqli_fetch_assoc($check3);
                 if($check4['STATUS']==0)
                 {
-                echo "<p><center><b>"."this person has already requested you <br>"."</b></center></p>";
-                echo "<form action='inbox.php'><center><p><b>click to accept request</b></p></center> <br> <center><p><input type=submit class='but' value='accept'/></p></center>/> </form> ";
+                echo "<p><center><b>".$rec." has already requested you <br>"."</b></center></p>";
+                echo "<form action='inbox.php'><center><p><input type=submit class='but' value='accept'/></p></center>/> </form> ";
                 }
                 else
                 {
-                    echo "<center><p><b>THIS TRAVEL REQUEST IS ALREADY CONFIRMED </b></p></center> <br>";
-                echo "<form action='confirm.php'><center><p><b>click to see details</b></p></center> <br><center><p><input type=submit class='but' value='DETAILS'</p></center>/> </form> ";
+                    echo "<center><p><b>TRAVEL REQUEST WITH ".$rec."IS ALREADY CONFIRMED </b></p></center>";
+                echo "<form action='confirm.php'><center><p><input type=submit class='but' value='SEE DETAILS'</p></center>/> </form> ";
                 }
             }
             else 
@@ -58,10 +58,10 @@ else if(!isset($_SESSION['username']))
             $q="INSERT INTO MESSAGES VALUES ('$id','$rec','$pl',0)";
             if(mysqli_query($con,$q))
             {
-                echo "<p><b><center>message ".$x." sent</center></b></p>";
+                echo "<p><b><center>message to ".$rec." sent succesfully</center></b></p>";
             }
             else {
-                echo "<p><b><center>message ".$x." failed</center></b></p>";
+                echo "<p><b><center>message to ".$rec." failed</center></b></p>";
             }
         }
         }

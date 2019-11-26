@@ -58,6 +58,7 @@
                     <option  value="cse">CSE</option>
                     <option  value="ECE">ECE</option>
                     <option  value="BIOTECH">Biotech</option>
+                    <option value="IT">IT </option>
                 </select></td>
             </tr>
             <tr>
@@ -78,6 +79,10 @@
             <tr>
               <td>  <label style="font-size:20px;color:rgb(245, 242, 94);">HOMETOWN</label></td>  
               <td> <input type="text" name="home" id="home" ></td>
+            </tr>
+            <tr>
+              <td>  <label style="font-size:20px;color:rgb(245, 242, 94);">CONTACT NUMBER</label></td>  
+              <td> <input type="number" name="mobile" id="mobile" ></td>
             </tr>
             <tr>
                 <td><label style="font-size:20px;color:rgb(245, 242, 94);">Set Password</label></td>

@@ -20,7 +20,7 @@ else if(!isset($_SESSION['username']))
     $moblist=array();
     $genlist=array();
     $semlist=array();
-    $cnf="SELECT SENDER,RECIEVER,TYPE FROM MESSAGES WHERE ( RECIEVER='$u' OR SENDER='$u') AND STATUS=1 AND TYPE='home'";
+    $cnf="SELECT SENDER,RECIEVER,TYPE FROM MESSAGES WHERE ( RECIEVER='$u' OR SENDER='$u') AND STATUS=1 AND TYPE <> 'home'";
     $cnf1=mysqli_query($con,$cnf);
     if(mysqli_num_rows($cnf1)>0)
     {
@@ -67,7 +67,7 @@ else if(!isset($_SESSION['username']))
     <center> <img class="image" src="logo1.jpg" height=200 width=200 style="border-radius:100px; transform:scale(0.7);" > </center>
     <h1>SHARECARE SOLUTIONS INDIA</h1> 
     <table cellpadding=20px border=20px align=center>
-    <center><b>YOUR CONFIRM TRIPS ARE AS FOLLOWS</b></center> <br>
+    <center><b>YOUR CONFIRM LOCAL TRIPS ARE AS FOLLOWS</b></center> <br>
     <hr>
     <tr id="head">
     <td>NAME</td>

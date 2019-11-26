@@ -43,7 +43,8 @@ if($con)
             $branch=$_POST['dept'];
             $sem=$_POST['sem'];
             $gen=$_POST['sex'];
-            $in_info="INSERT INTO INFO VALUES('$n','$e','$gen','$d','$col','$branch','$sem','$h','$en')";
+            $mobi=$_POST['mobile'];
+            $in_info="INSERT INTO INFO VALUES('$n','$e','$gen','$d','$col','$branch','$sem','$h','$en',$mobi)";
             if(mysqli_query($con,$in_info))
             {
                 header("location:login.php");
