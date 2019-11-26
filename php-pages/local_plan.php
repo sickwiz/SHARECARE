@@ -55,7 +55,7 @@ function create_button()
     var z=document.getElementById('morereq');
     z.innerHTML="<center><p><input type=button value='request another' onclick='create_button()' class='but'/></p></center>";
     var y=document.getElementById('reqbut');
-    y.innerHTML="<input type='submit' class='but' value='request' name='request'/>"
+    y.innerHTML="<center><input type='submit' class='but' value='request' name='request'/></center>"
 }
 </script>
      <head>
@@ -67,9 +67,14 @@ function create_button()
         <link rel="stylesheet" href="">
     </head>
     <body>
-    <h1> FOLLOWING PEOPLE ARE TRAVELLING TO THE SAME PLACE </h1> <hr>
+    <link rel="stylesheet" type="text/css" href="innerstyle.css">
+<center> <img class="image" src="logo1.jpg" height=200 width=200 style="border-radius:100px; transform:scale(0.7);" > </center>
+    <h1>SHARECARE SOLUTIONS INDIA</h1>
+    <hr>
+   <center><font size= "6"><b><span> FOLLOWING PEOPLE ARE TRAVELLING TO THE SAME PLACE   </span></font size></b></center>
+   <hr>
     <table align=center border=5px>
-    <tr>
+    <tr id="head">
     <td> NAME </td>
     <td> ENROLLMENT </td>
     <td> PLACE </td>
@@ -110,11 +115,12 @@ function create_button()
       </td>
     </tr>
     </table>
-    <p>CLICK TO REQUEST SOMEONE <center><input type="button" class="but" onclick="create_button()" value="REQUEST SOMEONE"/></center></p>
+    <p><center><input type="button" class="but" onclick="create_button()" value="REQUEST SOMEONE"/></center></p>
     <form action='local_request.php' method =POST>
     <div id='butarea'> </div>
     <div id='morereq'> </div> <br>
     <div id='reqbut'> </div>
     </form>
+    <p><center> <a href='login_home.php'><input type='button' class='but' value='back'></a></center></p>
     </body>
 </html>

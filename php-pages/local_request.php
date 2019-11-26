@@ -1,3 +1,13 @@
+<html>
+<body>
+<link rel="stylesheet" type="text/css" href="innerstyle.css">
+<center> <img class="image" src="logo1.jpg" height=200 width=200 style="border-radius:100px; transform:scale(0.7);" > </center>
+    <h1>SHARECARE SOLUTIONS INDIA</h1>
+    <hr>
+   <center><font size= "6"><b><span> REQUEST DETAILS </span></font size></b></center>
+   <hr>
+    </body>
+    </html>
 <?php
 include "connection.php";
 if(empty($_SESSION))
@@ -48,12 +58,13 @@ else if(!isset($_SESSION['username']))
             $q="INSERT INTO MESSAGES VALUES ('$id','$rec','$pl',0)";
             if(mysqli_query($con,$q))
             {
-                echo "message ".$x." sent";
+                echo "<p><b><center>message ".$x." sent</center></b></p>";
             }
             else {
-                echo "message ".$x." failed";
+                echo "<p><b><center>message ".$x." failed</center></b></p>";
             }
         }
         }
     }
+    echo "<p><center> <a href='login_home.php'><input type='button' class='but' value='back'></a></center></p>";
 ?>
