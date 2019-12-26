@@ -25,11 +25,6 @@ if($con)
             $sec=$_POST['security'];
             $sec_ps=($_POST['secpas']);
             $sec_ps1=password_hash($sec_ps,PASSWORD_ARGON2I);
-            echo "<br>";
-            echo $sec;
-            echo $sec_ps1;
-            echo $pass2;
-            echo $en;
             $in_login="INSERT INTO LOGIN VALUES('$en','$sec','$pass2','$sec_ps1')";
             if(mysqli_query($con,$in_login)) 
                 echo "1 <br>";

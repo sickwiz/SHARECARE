@@ -46,7 +46,7 @@ function create_del()
     var y=document.getElementById('moredel');
     y.innerHTML="<center><p><input type=button value='delete another' onclick='create_del()' class='but'/></p></center>";
     var z=document.getElementById('delbut');
-    z.innerHTML="<input type='submit' class='but' name='submit' value='delete'/> <br>";
+    z.innerHTML="<center><input type='submit' class='but' name='submit' value='delete'/> <br></center>";
 }
 
 function create_accep()
@@ -57,7 +57,7 @@ function create_accep()
     var y=document.getElementById('moreaccep');
     y.innerHTML="<center><p><input type=button value='accept another' onclick='create_accep()' class='but'/></p></center>";
     var z=document.getElementById('acbut');
-    z.innerHTML="<input type='submit' class='but' name='submit' value='accept'/> <br>";
+    z.innerHTML="<center><input type='submit' class='but' name='submit' value='accept'/> <br></center>";
 }
         </script>
         <link rel="stylesheet" type="text/css" href="innerstyle.css">
@@ -87,7 +87,7 @@ function create_accep()
      <td> 
      <?php for($x=0;$x<$length;$x++)
       {  
-          echo $s[$x]."<br>";
+          echo $s[$x]."<br><hr>";
       }
       ?> 
      </td>
@@ -95,7 +95,7 @@ function create_accep()
      <?php 
      for($y=0;$y<$length;$y++)
      {
-         echo $t[$y]."<br>";
+         echo $t[$y]."<br><hr>";
      }
      ?>
      </td>
@@ -103,7 +103,7 @@ function create_accep()
      <?php 
      for($z=0;$z<$length;$z++)
      {
-         echo $sname[$z]." <br> ";
+         echo $sname[$z]." <br><hr> ";
      }
      ?>
      </td>

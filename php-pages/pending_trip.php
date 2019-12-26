@@ -42,22 +42,22 @@ function create_del()
 {
     var x=document.getElementById('en2');
     //var y="<input type='number' placeholder='enrollment'/> <br> <input type=button value='submit'/>";
-    x.innerHTML+="<center><p><input type='number' name='del_list[]' placeholder='enrollment'/><input type='number' name='pl_list[]' placeholder='enrollment'/></p></center> ";
+    x.innerHTML+="<center><p><input type='number' name='del_list[]' placeholder='enrollment'/><input type='text' name='pl_list[]' placeholder='enrollment'/></p></center> ";
     var y=document.getElementById('moredel');
     y.innerHTML="<center><p><input type=button value='delete another' onclick='create_del()' class='but'/></p></center>";
     var z=document.getElementById('delbut');
-    z.innerHTML="<input type='submit' class='but' name='submit' value='delete'/> <br>";
+    z.innerHTML="<center><input type='submit' class='but' name='submit' value='delete'/> <br></center>";
 }
 
 function create_accep()
 {
     var x=document.getElementById('en1');
     //var y="<input type='number' placeholder='enrollment'/> <br> <input type=button value='submit'/>";
-    x.innerHTML+="<center><p><input type='number' name='accep_list[]' placeholder='enrollment'/><input type='number' name='place_list[]' placeholder='place'/></p></center> ";
+    x.innerHTML+="<center><p><input type='number' name='accep_list[]' placeholder='enrollment'/><input type='text' name='place_list[]' placeholder='place'/></p></center> ";
     var y=document.getElementById('moreaccep');
     y.innerHTML="<center><p><input type=button value='accept another' onclick='create_accep()' class='but'/></p></center>";
     var z=document.getElementById('acbut');
-    z.innerHTML="<input type='submit' class='but' name='submit' value='accept'/> <br>";
+    z.innerHTML="<center><input type='submit' class='but' name='submit' value='accept'/> <br></center>";
 }
         </script>
         <link rel="stylesheet" type="text/css" href="innerstyle.css">
@@ -87,7 +87,7 @@ function create_accep()
      <td> 
      <?php for($x=0;$x<$length;$x++)
       {  
-          echo $s[$x]."<br>";
+          echo $s[$x]."<br> <hr>";
       }
       ?> 
      </td>
@@ -95,7 +95,7 @@ function create_accep()
      <?php 
      for($y=0;$y<$length;$y++)
      {
-         echo $t[$y]."<br>";
+         echo $t[$y]."<br> <hr>";
      }
      ?>
      </td>
@@ -103,7 +103,7 @@ function create_accep()
      <?php 
      for($z=0;$z<$length;$z++)
      {
-         echo $sname[$z]." <br> ";
+         echo $sname[$z]." <br><hr> ";
      }
      ?>
      </td>
@@ -117,7 +117,7 @@ function create_accep()
     
     <p><center><b align= center ><input type=submit class="but" value='DELETE MESSEGE' name='submit'/></b></center></p>
     </form> -->
-    <form action="accept.php" method="POST">
+    <form action="local_accept.php" method="POST">
 <br>
 <p><center><input type="button" class="but" onclick="create_accep()" value="ACCEPT REQUEST"/></center></p>
 <div id="en1"> </div>

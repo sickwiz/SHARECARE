@@ -1,5 +1,4 @@
 <?php
-echo "welcome <br>";
 $user="sickwiz";
 $l="localhost";
 $p="2409";
