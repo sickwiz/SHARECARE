@@ -7,6 +7,7 @@ SHARE CARE SOLUTION
 </head>
 <body>
 <div>
+<center> <img class="image" src="logo1.jpg" height=200 width=200 style="border-radius:100px; transform:scale(0.7);" > </center>
 <h1>SHARECARE SOLUTIONS INDIA</h1>
 
 <p>
@@ -48,8 +49,6 @@ Apart from this, we are also including the home travel button so that people fro
 </div>
 
 <p id="foo">Copyright &copy; share care solutions<br>
-designed by &copy; aamir ahmad<br>
-designed by &copy; vivek dwivedi<br>
 </P>
 
 

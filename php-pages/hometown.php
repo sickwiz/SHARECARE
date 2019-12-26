@@ -24,7 +24,7 @@ else if(!isset($_SESSION['username']))
         $home2=mysqli_fetch_assoc($home1);
         $home3=$home2['HOME'];
         //echo $userid."<br>";
-        echo $home3;
+        //echo $home3;
         $findhome="SELECT NAME,ENROLLMENT FROM INFO WHERE HOME='$home3'";
         $findhome1=mysqli_query($con,$findhome);
         if(mysqli_num_rows($findhome1)>0)

@@ -85,7 +85,7 @@ function create_button()
     <?php 
     for($x=0;$x<$length;$x++)
     {
-        echo $name[$x]."<br> <br>";
+        echo $name[$x]."<br> <hr>";
     }
     ?>
       </td>
@@ -93,7 +93,7 @@ function create_button()
     <?php 
     for($x=0;$x<$length;$x++)
     {
-        echo $en[$x]."<br> <br>";
+        echo $en[$x]."<br><hr>";
     }
     ?>
       </td>
@@ -101,7 +101,7 @@ function create_button()
     <?php 
     for($x=0;$x<$length;$x++)
     {
-        echo $place[$x]."<br> <br>";
+        echo $place[$x]."<br> <hr>";
     }
     ?>
       </td>
@@ -109,7 +109,7 @@ function create_button()
     <?php 
     for($x=0;$x<$length;$x++)
     {
-        echo $dt[$x]."<br> <br>";
+        echo $dt[$x]."<br> <hr>";
     }
     ?>
       </td>

@@ -1,4 +1,5 @@
 <?php
+include"connection.php";
 if(empty($_SESSION))
 {
     session_start();
@@ -57,6 +58,19 @@ SHARE CARE SOLUTION
 </ul>
  </div>
   </div>
+
+  <div class="dropdown">
+  <button class="dropbtn">PROFILE
+<i class="fa fa-caret-down"></i>
+  </button>
+  <div class="dropdown-content">
+<ul>
+<a href="pswrd_change.php">CHANGE PASSWORD</a> 
+<a href="edit_detail.php"> EDIT DETAILS </a> 
+<a href="plan_view.php"> SEE YOUR PLANS</a> 
+</ul>
+</div>
+</div>
 </div>
 <div id="im">
 <img id="im1" src="cabim.jpeg">

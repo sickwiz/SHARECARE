@@ -1,9 +1,5 @@
 <?php
-$user="sickwiz";
-$l="localhost";
-$p="2409";
-$d="SHARECARE";
-$con= mysqli_connect($l,$user,$p,$d);
+include "connection.php";
 if($con)
 if(isset($_POST['submit']))
 {
@@ -55,7 +51,6 @@ else if(isset($_SESSION['username']))
     $y=$x+1;  
     $inc="UPDATE FORGOT SET COUNTER=$y WHERE ENROLLMENT='$e' ";
     mysqli_query($con,$inc);
-    header("location:forgot.html");
     echo "<br>".$c."attempts left";
     }
     }
@@ -78,9 +73,9 @@ else
         }  
         else
         {
+            echo "wrong security answer or question";
             $entry="INSERT INTO FORGOT VALUES(1,'$e')";
             mysqli_query($con,$entry); 
-            header("location:forgot.html");
         } 
 }
 }
