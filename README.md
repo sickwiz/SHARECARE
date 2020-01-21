@@ -8,6 +8,11 @@ You can clone make necessary changes to customise it for your own college.
 During login/signup->
 Enrollment number is a random 10-12 digit number.
 
+>>To import database->
+Go to phpmyadmin
+Create a database named SHARECARE
+Import SHARECARE.sql file
+
 Any feedback/suggestion is most welcomed.
 
 
