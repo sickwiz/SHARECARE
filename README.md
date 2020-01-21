@@ -1,11 +1,13 @@
 # SHARECARE
 SHARECARE SOLUTIONS IS A COLLEGE BASED JOURNEY PLANNER SERVICE .
+This is basically a generic web application built using js,php,html and css.
 
-For people making any changes,the rules are as follows:-
-1)Make sure you upload your pages in the respective folders designated for the file types e.g HTML pages must be 
-uploaded into the html-sheets folder.
+Currently it is customised for students of Jaypee University only.
+You can clone make necessary changes to customise it for your own college.
 
-2)When you clone the repository, save all the files in single location to run it on a localhost.
+During login/signup->
+Enrollment number is a random 10-12 digit number.
 
-3)Make sure you make all the changes in new-branch only.
+Any feedback/suggestion is most welcomed.
+
 
