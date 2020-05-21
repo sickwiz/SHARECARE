@@ -17,6 +17,6 @@ Any feedback/suggestion is most welcomed.
 
 #COLLABORATORS
 
-[https://githum.com/padfoot0](DHEERAJ KUMAR)
+[DHEERAJ KUMAR](https://githum.com/padfoot0)
 
 
