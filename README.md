@@ -15,8 +15,11 @@ Import SHARECARE.sql file
 
 Any feedback/suggestion is most welcomed.
 
-#COLLABORATORS
+# COLLABORATORS
 
-[DHEERAJ KUMAR](https://githum.com/padfoot0)
+
+1-[*DHEERAJ KUMAR*](https://www.github.com/padfoot0)
+
+2-[*VIVEK DWIVEDI*](https://www.github.com/silent-devil)
 
 
