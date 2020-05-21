@@ -1,0 +1,92 @@
+/*
+*{
+    background-color:palegoldenrod;
+}*/
+h1
+{
+    font-family:'Courier New', Courier, monospace;
+    text-decoration:underline;
+    font-style:italic;
+    font-size:80px;
+    font-weight:bold;
+    word-spacing: 20pt;
+    letter-spacing: 10pt;
+    text-align:center;
+    color:black;
+    border-style:double;
+    border-color:white;
+    padding:20px;
+    border-radius:70px;
+    box-shadow:5px 10px 20px white;
+    background-image:linear-gradient(to bottom,rgb(245, 242, 94) 50%, #3C002F);
+}
+form{
+    text-align:center;
+}
+
+.button
+{
+    width:200px;
+    height:60px;
+    line-height:60px;
+    text-align:center;
+    font-size:30px;
+    color:black;
+    text-shadow: 1px 1px px rgba(0,0,0,0.3);
+    user-select:none;
+    border-radius:30px;
+    box-shadow: 0 5px 10px white;
+    background-image:linear-gradient(to bottom,rgb(245, 242, 94) 50%, #3C002F);
+    position:relative;
+}
+input{
+    widows: 100%;
+    padding:12px 20px;
+    box-sizing:border-box;
+    margin: 8px 0px;
+    border-radius:15px;
+}
+.image
+{
+    border-color:rgb(90, 207, 228);
+    box-shadow: 5px 10px 15px rgb(255, 255, 255);
+    border-radius:100px;
+    border-style:double;
+}
+body
+{
+    background:url(bulb.jpg) no-repeat fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+#menu
+{
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+}
+#item
+{
+	float: left;
+	
+}
+
+a:link, a:visited
+{
+	display:block;
+	width: 120px;
+	font-weight: bold;
+	color: white;
+	background-color: black;
+	text-align: center;
+	padding: 4px;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+a:hover, a:active
+{
+	color: red;
+}

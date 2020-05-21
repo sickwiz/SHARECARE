@@ -1,0 +1,99 @@
+h1{
+
+    font-family:'Courier New', Courier, monospace;
+    text-decoration:underline;
+    font-style:italic;
+    font-size:75px;
+    font-weight:bold;
+    word-spacing: 10pt;
+    letter-spacing: 5pt;
+    text-align:center;
+    color:black;
+    border-style:double;
+    border-color:white;
+    padding:20px;
+    border-radius:60px;
+    box-shadow: 5px 10px 20px white;
+    background-image:linear-gradient(to bottom,rgb(245, 242, 94) 50%, #3C002F);
+}
+
+*{
+    text-align:center;
+}
+body
+{
+    background:url(logo.jpg) no repeat center center fixed;
+}
+a{
+    background-color:rgb(33, 245, 33) 50%
+}
+.button
+{
+    width:200px;
+    height:60px;
+    line-height:60px;
+    text-align:center;
+    font-size:30px;
+    color:black;
+    text-shadow: 1px 1px px rgba(0,0,0,0.3);
+    user-select:none;
+    border-radius:30px;
+    box-shadow: 0 5px 10px white;
+    background-image:linear-gradient(to bottom, rgb(245, 242, 94) 50%, #3C002F);
+    position:relative;
+    background-color:rgb(33, 245, 33) 50%;
+}
+input{
+    widows: 100%;
+    padding:12px 20px;
+    box-sizing:border-box;
+    margin: 8px 0px;
+    border-radius:15px;
+}
+table{
+    font-weight:bold;
+    font-optical-sizing:
+}
+.image
+{
+    border-color:rgb(90, 207, 228);
+    box-shadow: 5px 10px 15px white;
+    border-radius:100px;
+    border-style:double;
+}
+body
+{
+    background:url(bulb.jpg);
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+#menu
+{
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+}
+#item
+{
+	float: left;
+	
+}
+a:link, a:visited
+{
+	display:block;
+	width: 120px;
+	font-weight: bold;
+	color: white;
+	background-color: black;
+	text-align: center;
+	padding: 4px;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+a:hover, a:active
+{
+	color: red;
+}
